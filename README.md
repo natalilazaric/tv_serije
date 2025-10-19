@@ -10,8 +10,8 @@ Licencija: Creative Commons Zero v1.0 (CC0 1.0)
 
 Broj instanci: 10 serija + 3 uloge po seriji
 Opis tablica:
-    'serija' - sadrži osnovne informacije o TV serijama
-    'uloga' - sadrži informacije o glavnim ulogama u TV serijama
+	'serija' - sadrži osnovne informacije o TV serijama
+	'uloga' - sadrži informacije o glavnim ulogama u TV serijama
 Opis atributa:
     'id' - jedinstveni identifikator serije/uloge
     'naziv' - naziv serije
