@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "naziv": "Prijatelji (Friends)",
+        "zanr": "Komedija",
+        "godina": 1994,
+        "prosjecna_ocjena": 8.9,
+        "redatelj": "David Crane, Marta Kauffman",
+        "zemlja": "SAD",
+        "broj_sezona": 10,
+        "broj_epizoda": 236,
+        "trajanje_ep": 22,
+        "prema_knjizi": false,
+        "glavne_uloge": [
+            {
+                "glumac": "Jennifer Aniston",
+                "uloga": "Rachel Green"
+            },
+            {
+                "glumac": "Matthew Perry",
+                "uloga": "Chandler Bing"
+            },
+            {
+                "glumac": "Courteney Cox",
+                "uloga": "Monica Geller"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "naziv": "Igra prijestolja (Game of Thrones)",
+        "zanr": "Epska fantastika",
+        "godina": 2011,
+        "prosjecna_ocjena": 9.2,
+        "redatelj": "David Benioff, D.B Weiss",
+        "zemlja": "SAD",
+        "broj_sezona": 8,
+        "broj_epizoda": 73,
+        "trajanje_ep": 60,
+        "prema_knjizi": true,
+        "glavne_uloge": [
+            {
+                "glumac": "Kit Harington",
+                "uloga": "Jon Snow"
+            },
+            {
+                "glumac": "Peter Dinklage",
+                "uloga": "Tyrion Lannister"
+            },
+            {
+                "glumac": "Emilia Clarke",
+                "uloga": "Daenerys Targaryen"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "naziv": "U uredu (The Office)",
+        "zanr": "Komedija",
+        "godina": 2005,
+        "prosjecna_ocjena": 9.0,
+        "redatelj": "Greg Daniels",
+        "zemlja": "SAD",
+        "broj_sezona": 9,
+        "broj_epizoda": 201,
+        "trajanje_ep": 22,
+        "prema_knjizi": false,
+        "glavne_uloge": [
+            {
+                "glumac": "Steve Carell",
+                "uloga": "Michael Scott"
+            },
+            {
+                "glumac": "John Krasinski",
+                "uloga": "Jim Halpert"
+            },
+            {
+                "glumac": "Jenna Fischer",
+                "uloga": "Pam Beesly"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "naziv": "Kruna (The Crown)",
+        "zanr": "Drama",
+        "godina": 2016,
+        "prosjecna_ocjena": 8.6,
+        "redatelj": "Peter Morgan",
+        "zemlja": "UK",
+        "broj_sezona": 6,
+        "broj_epizoda": 60,
+        "trajanje_ep": 55,
+        "prema_knjizi": false,
+        "glavne_uloge": [
+            {
+                "glumac": "Claire Foy",
+                "uloga": "Queen Elizabeth II"
+            },
+            {
+                "glumac": "Matt Smith",
+                "uloga": "Prince Philip"
+            },
+            {
+                "glumac": "Dominic West",
+                "uloga": "Prince Charles"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "naziv": "Crno-bijeli svijet (Black & White World)",
+        "zanr": "Drama, Komedija",
+        "godina": 2015,
+        "prosjecna_ocjena": 8.7,
+        "redatelj": "Goran Kulenović, Igor Mirković",
+        "zemlja": "Hrvatska",
+        "broj_sezona": 4,
+        "broj_epizoda": 48,
+        "trajanje_ep": 50,
+        "prema_knjizi": false,
+        "glavne_uloge": [
+            {
+                "glumac": "Filip Riđički",
+                "uloga": "Voljen Kipčić"
+            },
+            {
+                "glumac": "Kaja Šišmanović",
+                "uloga": "Una Miličević"
+            },
+            {
+                "glumac": "Slavko Sobin",
+                "uloga": "Đermano Kurtela"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "naziv": "Kuća od papira (La casa de papel)",
+        "zanr": "Kriminalistička drama",
+        "godina": 2017,
+        "prosjecna_ocjena": 8.2,
+        "redatelj": "Álex Pina",
+        "zemlja": "Španjolska",
+        "broj_sezona": 5,
+        "broj_epizoda": 48,
+        "trajanje_ep": 60,
+        "prema_knjizi": false,
+        "glavne_uloge": [
+            {
+                "glumac": "Álvaro Morte",
+                "uloga": "Profesor"
+            },
+            {
+                "glumac": "Úrsula Corberó",
+                "uloga": "Tokio"
+            },
+            {
+                "glumac": "Pedro Alonso",
+                "uloga": "Berlin"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "naziv": "Na putu prema dolje (Breaking Bad)",
+        "zanr": "Kriminalistička drama",
+        "godina": 2008,
+        "prosjecna_ocjena": 9.5,
+        "redatelj": "Vince Gilligan",
+        "zemlja": "SAD",
+        "broj_sezona": 5,
+        "broj_epizoda": 62,
+        "trajanje_ep": 45,
+        "prema_knjizi": false,
+        "glavne_uloge": [
+            {
+                "glumac": "Bryan Cranston",
+                "uloga": "Walter White"
+            },
+            {
+                "glumac": "Aaron Paul",
+                "uloga": "Jesse Pinkman"
+            },
+            {
+                "glumac": "Anna Gunn",
+                "uloga": "Skyler White"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "naziv": "Sherlock",
+        "zanr": "Kriminalistička drama",
+        "godina": 2010,
+        "prosjecna_ocjena": 9.0,
+        "redatelj": "Mark Gatiss",
+        "zemlja": "UK",
+        "broj_sezona": 4,
+        "broj_epizoda": 13,
+        "trajanje_ep": 90,
+        "prema_knjizi": true,
+        "glavne_uloge": [
+            {
+                "glumac": "Benedict Cumberbatch",
+                "uloga": "Sherlock Holmes"
+            },
+            {
+                "glumac": "Martin Freeman",
+                "uloga": "Dr. John Watson"
+            },
+            {
+                "glumac": "Una Stubbs",
+                "uloga": "Mrs. Hudson"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "naziv": "Tračerica (Gossip Girl)",
+        "zanr": "Drama",
+        "godina": 2007,
+        "prosjecna_ocjena": 7.5,
+        "redatelj": "Josh Schwartz, Stephanie Savage",
+        "zemlja": "SAD",
+        "broj_sezona": 6,
+        "broj_epizoda": 121,
+        "trajanje_ep": 42,
+        "prema_knjizi": true,
+        "glavne_uloge": [
+            {
+                "glumac": "Penn Badgley",
+                "uloga": "Dan Humphrey"
+            },
+            {
+                "glumac": "Blake Lively",
+                "uloga": "Serena van der Woodsen"
+            },
+            {
+                "glumac": "Leighton Meester",
+                "uloga": "Blair Waldorf"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "naziv": "Broadchurch",
+        "zanr": "Kriminalistička drama",
+        "godina": 2013,
+        "prosjecna_ocjena": 8.3,
+        "redatelj": "Chris Chibnall",
+        "zemlja": "UK",
+        "broj_sezona": 3,
+        "broj_epizoda": 24,
+        "trajanje_ep": 48,
+        "prema_knjizi": false,
+        "glavne_uloge": [
+            {
+                "glumac": "Olivia Colman",
+                "uloga": "Ellie Miller"
+            },
+            {
+                "glumac": "David Tennant",
+                "uloga": "Alec Hardy"
+            },
+            {
+                "glumac": "Jodie Whittaker",
+                "uloga": "Beth Latimer"
+            }
+        ]
+    }
+]
