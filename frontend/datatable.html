@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tablica TV serija</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 5px; text-align: left; }
+    th { background-color: #eee; }
+  </style>
+</head>
+<body>
+  <h1>TV serije</h1>
+  <br>
+  <label for="filter">Filter:</label>
+  <input type="text" id="filter">
+  
+  <label for="attribute">Atribut:</label>
+  <select id="attribute">
+    <option value="all">Svi atributi</option>
+    <option value="naziv">Naziv</option>
+    <option value="zanr">Žanr</option>
+    <option value="godina">Godina</option>
+    <option value="prosjecna_ocjena">Prosječna ocjena</option>
+    <option value="redatelj">Redatelj</option>
+    <option value="zemlja">Zemlja</option>
+    <option value="broj_sezona">Broj sezona</option>
+    <option value="broj_epizoda">Broj epizoda</option>
+    <option value="trajanje_ep">Trajanje epizode</option>
+    <option value="prema_knjizi">Prema knjizi</option>
+    <option value="glumac">Glumac</option>
+    <option value="naziv_uloge">Uloga</option>
+  </select>
+  <button id="searchBtn">Traži</button>
+  <button id="resetBtn">Poništi filter</button>
+  <button id="downloadCSV">Preuzmi CSV</button>
+  <button id="downloadJSON">Preuzmi JSON</button>
+
+  <table id="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Naziv</th>
+        <th>Žanr</th>
+        <th>Godina</th>
+        <th>Prosečna ocjena</th>
+        <th>Redatelj</th>
+        <th>Zemlja</th>
+        <th>Broj sezona</th>
+        <th>Broj epizoda</th>
+        <th>Trajanje epizode</th>
+        <th>Prema knjizi</th>
+        <th>Uloge</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const tableBody = document.querySelector('#table tbody');
+    const filterInput = document.getElementById('filter');
+    const attributeSelect = document.getElementById('attribute');
+
+    async function fetchData(format = '') {
+      const filter = filterInput.value;
+      const attribute = attributeSelect.value;
+      let url = `http://localhost:3000/api/serije?filter=${filter}&attribute=${attribute}`;
+      if (format) url += `&format=${format}`;
+
+      const res = await fetch(url);
+
+      if (format === 'csv') {
+        const blob = await res.blob();
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'serije.csv';
+        link.click();
+        return;
+      }
+
+      if (format === 'json') {
+        const data = await res.json();
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'serije.json';
+        link.click();
+        return;
+      }
+
+      const data = await res.json();
+      renderTable(data);
+    }
+
+    function renderTable(data) {
+      tableBody.innerHTML = '';
+      data.forEach(s => {
+        const uloge = s.uloge.map(u => `${u.uloga} (${u.glumac})`).join(', ');
+        tableBody.innerHTML += `
+          <tr>
+            <td>${s.id}</td>
+            <td>${s.naziv}</td>
+            <td>${s.zanr}</td>
+            <td>${s.godina}</td>
+            <td>${s.prosjecna_ocjena}</td>
+            <td>${s.redatelj}</td>
+            <td>${s.zemlja}</td>
+            <td>${s.broj_sezona}</td>
+            <td>${s.broj_epizoda}</td>
+            <td>${s.trajanje_ep}</td>
+            <td>${s.prema_knjizi}</td>
+            <td>${uloge}</td>
+          </tr>
+        `;
+      });
+    }
+
+    document.getElementById('searchBtn').addEventListener('click', () => fetchData());
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      filterInput.value = '';
+      attributeSelect.value = 'all';
+      fetchData();
+    });
+    document.getElementById('downloadCSV').addEventListener('click', () => fetchData('csv'));
+    document.getElementById('downloadJSON').addEventListener('click', () => fetchData('json'));
+      
+    fetchData();
+  </script>
+</body>
+</html>
