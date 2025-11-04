@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/natalilazaric/tv_serije/blob/main/tv_serije.json",
+  "type": "array",
+  "title": "OR TV serije",
+  "description": "Skup TV serija i glavnih uloga za otvoreno računarstvo.",
+  "items": {
+    "type": "object",
+    "title": "TV serija",
+    "description": "Objekt koji sadrži sve podatke o jednom seriji.",
+    "properties": {
+      "id": {
+        "type": "number",
+        "title": "id",
+        "description": "jedinstveni identifikator serije"
+      },
+      "naziv": {
+        "type": "string",
+        "title": "naziv",
+        "description": "Naziv serije"
+      },
+      "zanr": {
+        "type": "string",
+        "title": "zanr",
+        "description": "Zanr serije"
+      },
+      "godina": {
+        "type": "number",
+        "title": "godina",
+        "description": "Godina pocetka emitiranja"
+      },
+      "prosjecna_ocjena": {
+        "type": "number",
+        "title": "prosjecna_ocjena",
+        "description": "Prosjecna ocjena serije"
+      },
+      "redatelj": {
+        "type": "string",
+        "title": "redatelj",
+        "description": "Ime i prezime redatelja serije"
+      },
+      "zemlja": {
+        "type": "string",
+        "title": "zemlje",
+        "description": "Zemlja produkcije"
+      },
+      "broj_sezona": {
+        "type": "number",
+        "title": "broj_sezona",
+        "description": "Ukupan broj sezona"
+      },
+      "broj_epizoda": {
+        "type": "number",
+        "title": "broj_epizoda",
+        "description": "Ukupan broj epizoda"
+      },
+      "trajanje_ep": {
+        "type": "number",
+        "title": "trajanje_ep",
+        "description": "Prosjecno trajanje epizode u minutama"
+      },
+      "prema_knjizi": {
+        "type": "boolean",
+        "title": "prema_knjizi",
+        "description": "Oznaka je li serija adaptacija knjige"
+      },
+      "glavne_uloge": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "glumac": {
+              "type": "string",
+              "title": "glumac",
+              "description": "Ime i prezime glumca"
+            },
+            "uloga": {
+              "type": "string",
+              "title": "naziv_uloge",
+              "description": "Naziv uloge glumca"
+            }
+          },
+          "required": [
+            "glumac",
+            "uloga"
+          ]
+        }
+      }
+    },
+    "required": [
+      "id",
+      "naziv",
+      "zanr",
+      "godina",
+      "prosjecna_ocjena",
+      "redatelj",
+      "zemlja",
+      "broj_sezona",
+      "broj_epizoda",
+      "trajanje_ep",
+      "prema_knjizi",
+      "glavne_uloge"
+    ]
+  }
+}
