@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+h3, h4 {
+  color: #555;
+  margin-top: 30px;
+}
+
+form div, div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 130px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+div > button {
+  margin-left: 140px;
+}
+
+h3, h4 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+#filter, #attribute {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#filter + button, #attribute + button {
+  margin-left: 5px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* razmak između kolona */
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+.column {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  flex: 1; /* obje kolone iste širine */
+}
+
+.column h4 {
+  margin-top: 0;
+}

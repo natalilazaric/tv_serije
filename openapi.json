@@ -1,0 +1,347 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "info": "API TV serije",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/serije": {
+            "get": {
+                "summary": "Dohvati listu serija s opcionalnim filterom",
+                "description": "Vraća sve serije, moguće filtrirane po atributu",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "Tekstualni filter koji se primjenjuje na odabrani atribut",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "attribute",
+                        "in": "query",
+                        "description": "Atribut po kojem se filtira",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["all", "naziv", "zanr", "godina", "prosjecna_ocjena", "redatelj", "zemlja", "broj_sezona", "broj_epizoda", "trajanje_ep", "prema_knjizi", "glumac", "naziv_uloge"]
+                    },
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "description": "Format za preuzimanje podataka",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["csv", "json"]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista serija dohvaćena",
+                        "schema": {
+                            "$ref": "#/components/sc"
+                        }
+                    },
+                    "500": {
+                        "description": "Greška pri dohvaćanju podataka"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Dodaj novu seriju",
+                "description": "Omogućuje dodavanje nove serije zajedno s ulogama (max 3).",
+                "produces": [
+                    "application/json"
+                ],
+                "requestBody": [
+                    {
+                        "required": true,
+                        "type": "string",
+                        "enum": ["csv", "json"]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Serija uspješno dodana",
+                        "schema": {
+                            "$ref": "#/components/schemas/ResponseSerije"
+                        }
+                    },
+                    "400": {
+                        "description": "Neispravan zahtjev"
+                    },
+                    "500": {
+                        "description": "Greška pri dohvaćanju podataka"
+                    }
+                }
+            }
+        },
+        "/api/serije/{id}": {
+            "get": {
+                "summary": "Dohvati seriju po ID-u",
+                "description": "Vraća određenu seriju prema ID-u",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID serije",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Serija dohvaćena",
+                        "schema": {
+                            "$ref": "#/components/schemas/ResponseSerije"
+                        }
+                    },
+                    "404": {
+                        "description": "Serija nije pronađena"
+                    },
+                    "500": {
+                        "description": "Greška na serveru"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Ažuriraj seriju po ID-u",
+                "description": "Ažurira određenu seriju prema ID-u",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID serije",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/components/schemas/SerijaInput"
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Serija ažurirana",
+                        "schema": {
+                            "$ref": "#/components/schemas/ResponseMessage"
+                        }
+                    },
+                    "404": {
+                        "description": "Serija nije pronađena"
+                    },
+                    "500": {
+                        "description": "Greška na serveru"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Obriši seriju po ID-u",
+                "description": "Briše određenu seriju prema ID-u",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID serije",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Serija obrisana",
+                        "schema": {
+                            "$ref": "#/components/schemas/ResponseMessage"
+                        }
+                    },
+                    "404": {
+                        "description": "Serija nije pronađena"
+                    },
+                    "500": {
+                        "description": "Greška na serveru"
+                    }
+                }
+            }
+        },
+        "/api/serije/godina/{godina}": {
+            "get": {
+                "summary": "Dohvati serije po godini",
+                "description": "Vraća sve serije nastale određene godine",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "godina",
+                        "in": "path",
+                        "description": "godina nastanka serije",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Serije dohvaćene",
+                        "schema": {
+                            "$ref": "#/components/schemas/ResponseSerije"
+                        }
+                    },
+                    "500": {
+                        "description": "Greška na serveru"
+                    }
+                }
+            }
+        },
+        "/api/serije/zanr/{zanr}": {
+            "get": {
+                "summary": "Dohvati serije po žanru",
+                "description": "Vraća sve serije određenog žanra",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "zanr",
+                        "in": "path",
+                        "description": "žanr serije",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Serije dohvaćene",
+                        "schema": {
+                            "$ref": "#/components/schemas/ResponseSerije"
+                        }
+                    },
+                    "500": {
+                        "description": "Greška na serveru"
+                    }
+                }
+            }
+        },
+        "/api/serije/prema-knjizi/{daNe}": {
+            "get": {
+                "summary": "Dohvati serije prema knjizi",
+                "description": "Vraća sve serije koje nisu ili jesu nastale prema knjizi",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "daNe",
+                        "in": "path",
+                        "description": "Atribut prema knjizi serije",
+                        "required": true,
+                        "type": "string",
+                        "enum": [
+                            "da",
+                            "ne"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Serije dohvaćene",
+                        "schema": {
+                            "$ref": "#/components/schemas/ResponseSerije"
+                        }
+                    },
+                    "500": {
+                        "description": "Greška na serveru"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas":{
+            "SerijaInput": {
+                "type": "object",
+                "properties": {
+                    "naziv": {
+                        "type": "string"
+                    },
+                    "zanr": {
+                        "type": "string"
+                    },
+                    "godina": {
+                        "type": "integer"
+                    },
+                    "prosjecna_ocjena": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "redatelj": {
+                        "type": "string"
+                    },
+                    "zemlja": {
+                        "type": "string"
+                    },
+                    "broj_sezona": {
+                        "type": "integer"
+                    },
+                    "broj_epizoda": {
+                        "type": "integer"
+                    },
+                    "trajanje_ep": {
+                        "type": "integer"
+                    },
+                    "prema_knjizi": {
+                        "type": "boolean"
+                    },
+                    "uloge": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Uloga"
+                        }
+                    }
+                }
+            },
+            "Uloga": {
+                "type": "object",
+                "properties": {
+                    "glumac": {
+                        "type": "string"
+                    },
+                    "uloga": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ResponseSerije": {
+                "type": "object",
+                "properties": {
+                    "response": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SerijaInput"
+                        }
+                    }
+                }
+            },
+            "ResponseMessage": {
+                "type": "object",
+                "properties": {
+                    "response": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

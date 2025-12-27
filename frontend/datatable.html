@@ -8,13 +8,100 @@
     th, td { border: 1px solid #ccc; padding: 5px; text-align: left; }
     th { background-color: #eee; }
   </style>
+  <link rel="stylesheet" href="style2.css">
 </head>
 <body>
   <h1>TV serije</h1>
-  <br>
+
+  <!-- Dodavanje nove serije -->
+  <h3>Dodaj novu seriju</h3>
+  <div class="form-container">
+    <div class="column">
+      <div><label>Naziv:</label><input type="text" id="newNaziv"></div>
+      <div><label>Žanr:</label><input type="text" id="newZanr"></div>
+      <div><label>Godina:</label><input type="number" id="newGodina"></div>
+      <div><label>Prosječna ocjena:</label><input type="number" step="0.1" id="newProsjecnaOcjena"></div>
+      <div><label>Redatelj:</label><input type="text" id="newRedatelj"></div>
+      <div><label>Zemlja:</label><input type="text" id="newZemlja"></div>
+      <div><label>Broj sezona:</label><input type="number" id="newBrojSezona"></div>
+      <div><label>Broj epizoda:</label><input type="number" id="newBrojEpizoda"></div>
+      <div><label>Trajanje epizode:</label><input type="number" id="newTrajanjeEp"></div>
+      <div>
+        <label>Prema knjizi (Da/Ne):</label>
+        <select id="newPremaKnjizi">
+          <option value="true">Da</option>
+          <option value="false">Ne</option>
+        </select>
+      </div>
+    </div>
+    <div class="column">
+      <h4>Uloge (max 3)</h4>
+      <div>
+        <label>Glumac 1:</label><input type="text" id="newGlumac1">
+        <label>Uloga 1:</label><input type="text" id="newUloga1">
+      </div>
+      <div>
+        <label>Glumac 2:</label><input type="text" id="newGlumac2">
+        <label>Uloga 2:</label><input type="text" id="newUloga2">
+      </div>
+      <div>
+        <label>Glumac 3:</label><input type="text" id="newGlumac3">
+        <label>Uloga 3:</label><input type="text" id="newUloga3">
+      </div>
+    </div>
+    <div><button id="addBtn">Dodaj seriju</button></div>
+  </div>
+
+
+  <h3>Ažuriraj seriju po ID</h3>
+  <div class="form-container">
+    <div class="column">
+      <div><label>ID serije:</label><input type="number" id="updateId"></div>
+      <div><label>Naziv:</label><input type="text" id="updateNaziv"></div>
+      <div><label>Žanr:</label><input type="text" id="updateZanr"></div>
+      <div><label>Godina:</label><input type="number" id="updateGodina"></div>
+      <div><label>Prosječna ocjena:</label><input type="number" step="0.1" id="updateProsjecnaOcjena"></div>
+      <div><label>Redatelj:</label><input type="text" id="updateRedatelj"></div>
+      <div><label>Zemlja:</label><input type="text" id="updateZemlja"></div>
+      <div><label>Broj sezona:</label><input type="number" id="updateBrojSezona"></div>
+      <div><label>Broj epizoda:</label><input type="number" id="updateBrojEpizoda"></div>
+      <div><label>Trajanje epizode:</label><input type="number" id="updateTrajanjeEp"></div>
+      <div>
+        <label>Prema knjizi (Da/Ne):</label>
+        <select id="updatePremaKnjizi">
+          <option value="true">Da</option>
+          <option value="false">Ne</option>
+        </select>
+      </div>
+    </div>
+    <div class="column">
+      <h4>Uloge (zamjenjuju postojeće, max 3)</h4>
+      <div>
+        <label>Glumac 1:</label><input type="text" id="updateGlumac1">
+        <label>Uloga 1:</label><input type="text" id="updateUloga1">
+      </div>
+      <div>
+        <label>Glumac 2:</label><input type="text" id="updateGlumac2">
+        <label>Uloga 2:</label><input type="text" id="updateUloga2">
+      </div>
+      <div>
+        <label>Glumac 3:</label><input type="text" id="updateGlumac3">
+        <label>Uloga 3:</label><input type="text" id="updateUloga3">
+      </div>
+    </div>
+    <div><button id="updateBtn">Ažuriraj seriju</button></div>
+  </div>
+
+  
+  <h3>Obriši seriju po ID</h3>
+  <label>ID serije:</label><input type="number" id="deleteId">
+  <button id="deleteBtn">Obriši</button>
+  <br><br>
+
+  <h3>Pretraživanje tablice</h3>
+  <!-- Filtriranje po atributima (postojeće) -->
   <label for="filter">Filter:</label>
   <input type="text" id="filter">
-  
   <label for="attribute">Atribut:</label>
   <select id="attribute">
     <option value="all">Svi atributi</option>
@@ -35,6 +122,33 @@
   <button id="resetBtn">Poništi filter</button>
   <button id="downloadCSV">Preuzmi CSV</button>
   <button id="downloadJSON">Preuzmi JSON</button>
+
+  <br><br>
+  <div>
+    <label for="getById">Dohvati seriju po ID:</label>
+    <input type="number" id="getById">
+    <button id="fetchByIdBtn">Dohvati</button>
+  </div>
+  <div>
+    <label for="getByYear">Serije po godini:</label>
+    <input type="number" id="getByYear">
+    <button id="fetchByYearBtn">Dohvati</button>
+  </div>
+  <div>
+    <label for="getByGenre">Serije po žanru:</label>
+    <input type="text" id="getByGenre">
+    <button id="fetchByGenreBtn">Dohvati</button>
+  </div>
+  <div>
+    <label for="getByBook">Prema knjizi (Da/Ne):</label>
+    <select id="getByBook">
+      <option value="">-- odaberi --</option>
+      <option value="da">Da</option>
+      <option value="ne">Ne</option>
+    </select>
+    <button id="fetchByBookBtn">Dohvati</button>
+  </div>
+  <br><br>
 
   <table id="table">
     <thead>
@@ -89,20 +203,88 @@
       }
 
       const data = await res.json();
-      renderTable(data);
+      renderTable(data.response || data);
     }
+
+    function clearAddForm() {
+      document.getElementById('newNaziv').value = '';
+      document.getElementById('newZanr').value = '';
+      document.getElementById('newGodina').value = '';
+      document.getElementById('newProsjecnaOcjena').value = '';
+      document.getElementById('newRedatelj').value = '';
+      document.getElementById('newZemlja').value = '';
+      document.getElementById('newBrojSezona').value = '';
+      document.getElementById('newBrojEpizoda').value = '';
+      document.getElementById('newTrajanjeEp').value = '';
+      document.getElementById('newPremaKnjizi').value = 'true';
+      
+      for (let i = 1; i <= 3; i++) {
+        document.getElementById(`newGlumac${i}`).value = '';
+        document.getElementById(`newUloga${i}`).value = '';
+      }
+    }
+
+    function clearUpdateForm() {
+      document.getElementById('updateId').value = '';
+      document.getElementById('updateNaziv').value = '';
+      document.getElementById('updateZanr').value = '';
+      document.getElementById('updateGodina').value = '';
+      document.getElementById('updateProsjecnaOcjena').value = '';
+      document.getElementById('updateRedatelj').value = '';
+      document.getElementById('updateZemlja').value = '';
+      document.getElementById('updateBrojSezona').value = '';
+      document.getElementById('updateBrojEpizoda').value = '';
+      document.getElementById('updateTrajanjeEp').value = '';
+      document.getElementById('updatePremaKnjizi').value = 'true';
+      for (let i = 1; i <= 3; i++) {
+        document.getElementById(`updateGlumac${i}`).value = '';
+        document.getElementById(`updateUloga${i}`).value = '';
+      }
+    }
+
+    function clearDeleteForm() {
+      document.getElementById('deleteId').value = '';
+    }
+
+    function clearSearchForm() {
+      document.getElementById('filter').value = '';
+      document.getElementById('attribute').value = 'all';
+      document.getElementById('getById').value = '';
+      document.getElementById('getByYear').value = '';
+      document.getElementById('getByGenre').value = '';
+      document.getElementById('getByBook').value = '';
+    }
+
+    function getUloge(prefix) {
+      const uloge = [];
+
+      for (let i = 1; i <= 3; i++) {
+        const glumac = document.getElementById(`${prefix}Glumac${i}`).value;
+        const uloga = document.getElementById(`${prefix}Uloga${i}`).value;
+
+        if (glumac && uloga) {
+          uloge.push({
+            glumac: glumac,
+            naziv_uloge: uloga
+          });
+        }
+      }
+
+      return uloge;
+    }
+
 
     function renderTable(data) {
       tableBody.innerHTML = '';
       data.forEach(s => {
-        const uloge = s.uloge.map(u => `${u.uloga} (${u.glumac})`).join(', ');
+        const uloge = (s.uloge || []).map(u => `${u.uloga} (${u.glumac})`).join(', ');
         tableBody.innerHTML += `
           <tr>
             <td>${s.id}</td>
             <td>${s.naziv}</td>
             <td>${s.zanr}</td>
             <td>${s.godina}</td>
-            <td>${s.prosjecna_ocjena}</td>
+            <td>${s.prosjecna_ocjena || ''}</td>
             <td>${s.redatelj}</td>
             <td>${s.zemlja}</td>
             <td>${s.broj_sezona}</td>
@@ -123,7 +305,122 @@
     });
     document.getElementById('downloadCSV').addEventListener('click', () => fetchData('csv'));
     document.getElementById('downloadJSON').addEventListener('click', () => fetchData('json'));
-      
+
+    //dohvaćanje serije prema id-u
+    document.getElementById('fetchByIdBtn').addEventListener('click', async () => {
+      const id = document.getElementById('getById').value;
+      if (!id) return alert('Unesi ID');
+      const res = await fetch(`http://localhost:3000/api/serije/${id}`);
+      const data = await res.json();
+      renderTable([data.response]);
+      clearSearchForm();
+    });
+
+    //dohvaćanje serije prema godini nastanka
+    document.getElementById('fetchByYearBtn').addEventListener('click', async () => {
+      const year = document.getElementById('getByYear').value;
+      if (!year) return alert('Unesi godinu');
+      const res = await fetch(`http://localhost:3000/api/serije/godina/${year}`);
+      const data = await res.json();
+      renderTable(data.response);
+      clearSearchForm();
+    });
+    
+    //dohvaćanje serije prema žanru serije
+    document.getElementById('fetchByGenreBtn').addEventListener('click', async () => {
+      const genre = document.getElementById('getByGenre').value;
+      if (!genre) return alert('Unesi žanr');
+      const res = await fetch(`http://localhost:3000/api/serije/zanr/${genre}`);
+      const data = await res.json();
+      renderTable(data.response);
+      clearSearchForm();
+    });
+
+    //dohvaćanje serije prema atributu prema_knjizi
+    document.getElementById('fetchByBookBtn').addEventListener('click', async () => {
+      const value = document.getElementById('getByBook').value;
+      if (!value) return alert('Odaberi Da ili Ne');
+      const res = await fetch(`http://localhost:3000/api/serije/prema-knjizi/${value}`);
+      const data = await res.json();
+      renderTable(data.response);
+      clearSearchForm();
+    });
+
+    //dodavanje serije
+    document.getElementById('addBtn').addEventListener('click', async () => {
+      const novaSerija = {
+        naziv: document.getElementById('newNaziv').value,
+        zanr: document.getElementById('newZanr').value,
+        godina: parseInt(document.getElementById('newGodina').value),
+        prosjecna_ocjena: parseFloat(document.getElementById('newProsjecnaOcjena').value) || null,
+        redatelj: document.getElementById('newRedatelj').value,
+        zemlja: document.getElementById('newZemlja').value,
+        broj_sezona: parseInt(document.getElementById('newBrojSezona').value),
+        broj_epizoda: parseInt(document.getElementById('newBrojEpizoda').value),
+        trajanje_ep: parseInt(document.getElementById('newTrajanjeEp').value),
+        prema_knjizi: document.getElementById('newPremaKnjizi').value === "true",
+        uloge: getUloge('new')
+      };
+
+      const res = await fetch('http://localhost:3000/api/serije', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(novaSerija)
+      });
+
+      const data = await res.json();
+      alert(`Serija dodana s ID: ${data.response.id}`);
+      clearAddForm();
+      fetchData();
+    });
+
+    //ažuriranje serije
+    document.getElementById('updateBtn').addEventListener('click', async () => {
+      const id = document.getElementById('updateId').value;
+      if (!id) return alert('Unesi ID serije za update');
+
+      const updated = {
+        naziv: document.getElementById('updateNaziv').value,
+        zanr: document.getElementById('updateZanr').value,
+        godina: parseInt(document.getElementById('updateGodina').value),
+        prosjecna_ocjena: parseFloat(document.getElementById('updateProsjecnaOcjena').value) || null,
+        redatelj: document.getElementById('updateRedatelj').value,
+        zemlja: document.getElementById('updateZemlja').value,
+        broj_sezona: parseInt(document.getElementById('updateBrojSezona').value),
+        broj_epizoda: parseInt(document.getElementById('updateBrojEpizoda').value),
+        trajanje_ep: parseInt(document.getElementById('updateTrajanjeEp').value),
+        prema_knjizi: document.getElementById('updatePremaKnjizi').value === "true",
+        uloge: getUloge('update')
+      };
+
+      const res = await fetch(`http://localhost:3000/api/serije/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updated)
+      });
+
+      const data = await res.json();
+      if (res.status === 404) return alert(data.error);
+      alert(`Serija s ID ${id} ažurirana`);
+      clearUpdateForm();
+      fetchData();
+    });
+
+    //brisanje serije prema id-u
+    document.getElementById('deleteBtn').addEventListener('click', async () => {
+      const id = document.getElementById('deleteId').value;
+      if (!id) return alert('Unesi ID serije za brisanje');
+
+      const res = await fetch(`http://localhost:3000/api/serije/${id}`, {
+        method: 'DELETE'
+      });
+
+      const data = await res.json();
+      if (res.status === 404) return alert(data.error);
+      alert(data.response);
+      clearDeleteForm();
+      fetchData();
+    });
     fetchData();
   </script>
 </body>
