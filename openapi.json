@@ -1,8 +1,14 @@
 {
     "openapi": "3.0.3",
     "info": {
-        "info": "API TV serije",
-        "version": "1.0"
+        "title": "API TV serije",
+        "description": "REST API za upravljanje TV serijama",
+        "version": "1.0",
+        "contact": {
+            "name": "Natali Lazarić",
+            "email": "natali.lazaric@fer.hr"
+        },
+        "license":  "Creative Commons Zero v1.0 (CC0 1.0)"
     },
     "paths": {
         "/api/serije": {
@@ -263,6 +269,24 @@
                     },
                     "500": {
                         "description": "Greška na serveru"
+                    }
+                }
+            }
+        },
+        "/api/openapi": {
+            "get": {
+                "summary": "Dohvat OpenAPI specifikacije",
+                "description": "Vraća OpenAPI specifikaciju u JSON formatu",
+                "responses": {
+                    "200": {
+                        "description": "OpenAPI specifikacija",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
