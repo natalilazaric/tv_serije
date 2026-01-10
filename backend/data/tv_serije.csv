@@ -1,31 +1,36 @@
-serija_id,serija_naziv,zanr,godina,prosjecna_ocjena,redatelj,zemlja,broj_sezona,broj_epizoda,trajanje_ep,prema_knjizi,glumac,naziv_uloge
-1,Prijatelji (Friends),Komedija,1994,8.9,"David Crane, Marta Kauffman",SAD,10,236,22,f,Jennifer Aniston,Rachel Green
-1,Prijatelji (Friends),Komedija,1994,8.9,"David Crane, Marta Kauffman",SAD,10,236,22,f,Matthew Perry,Chandler Bing
-1,Prijatelji (Friends),Komedija,1994,8.9,"David Crane, Marta Kauffman",SAD,10,236,22,f,Courteney Cox,Monica Geller
-2,Igra prijestolja (Game of Thrones),Epska fantastika,2011,9.2,"David Benioff, D.B Weiss",SAD,8,73,60,t,Kit Harington,Jon Snow
-2,Igra prijestolja (Game of Thrones),Epska fantastika,2011,9.2,"David Benioff, D.B Weiss",SAD,8,73,60,t,Peter Dinklage,Tyrion Lannister
-2,Igra prijestolja (Game of Thrones),Epska fantastika,2011,9.2,"David Benioff, D.B Weiss",SAD,8,73,60,t,Emilia Clarke,Daenerys Targaryen
-3,U uredu (The Office),Komedija,2005,9.0,Greg Daniels,SAD,9,201,22,f,Steve Carell,Michael Scott
-3,U uredu (The Office),Komedija,2005,9.0,Greg Daniels,SAD,9,201,22,f,John Krasinski,Jim Halpert
-3,U uredu (The Office),Komedija,2005,9.0,Greg Daniels,SAD,9,201,22,f,Jenna Fischer,Pam Beesly
-4,Kruna (The Crown),Drama,2016,8.6,Peter Morgan,UK,6,60,55,f,Claire Foy,Queen Elizabeth II
-4,Kruna (The Crown),Drama,2016,8.6,Peter Morgan,UK,6,60,55,f,Matt Smith,Prince Philip
-4,Kruna (The Crown),Drama,2016,8.6,Peter Morgan,UK,6,60,55,f,Dominic West,Prince Charles
-5,Crno-bijeli svijet (Black & White World),"Drama, Komedija",2015,8.7,"Goran Kulenović, Igor Mirković",Hrvatska,4,48,50,f,Filip Riđički,Voljen Kipčić
-5,Crno-bijeli svijet (Black & White World),"Drama, Komedija",2015,8.7,"Goran Kulenović, Igor Mirković",Hrvatska,4,48,50,f,Kaja Šišmanović,Una Miličević
-5,Crno-bijeli svijet (Black & White World),"Drama, Komedija",2015,8.7,"Goran Kulenović, Igor Mirković",Hrvatska,4,48,50,f,Slavko Sobin,Đermano Kurtela
-6,Kuća od papira (La casa de papel),Kriminalistička drama,2017,8.2,Álex Pina,Španjolska,5,48,60,f,Álvaro Morte,Profesor
-6,Kuća od papira (La casa de papel),Kriminalistička drama,2017,8.2,Álex Pina,Španjolska,5,48,60,f,Úrsula Corberó,Tokio
-6,Kuća od papira (La casa de papel),Kriminalistička drama,2017,8.2,Álex Pina,Španjolska,5,48,60,f,Pedro Alonso,Berlin
-7,Na putu prema dolje (Breaking Bad),Kriminalistička drama,2008,9.5,Vince Gilligan,SAD,5,62,45,f,Bryan Cranston,Walter White
-7,Na putu prema dolje (Breaking Bad),Kriminalistička drama,2008,9.5,Vince Gilligan,SAD,5,62,45,f,Aaron Paul,Jesse Pinkman
-7,Na putu prema dolje (Breaking Bad),Kriminalistička drama,2008,9.5,Vince Gilligan,SAD,5,62,45,f,Anna Gunn,Skyler White
-8,Sherlock,Kriminalistička drama,2010,9.0,Mark Gatiss,UK,4,13,90,t,Benedict Cumberbatch,Sherlock Holmes
-8,Sherlock,Kriminalistička drama,2010,9.0,Mark Gatiss,UK,4,13,90,t,Martin Freeman,Dr. John Watson
-8,Sherlock,Kriminalistička drama,2010,9.0,Mark Gatiss,UK,4,13,90,t,Una Stubbs,Mrs. Hudson
-9,Tračerica (Gossip Girl),Drama,2007,7.5,"Josh Schwartz, Stephanie Savage",SAD,6,121,42,t,Penn Badgley,Dan Humphrey
-9,Tračerica (Gossip Girl),Drama,2007,7.5,"Josh Schwartz, Stephanie Savage",SAD,6,121,42,t,Blake Lively,Serena van der Woodsen
-9,Tračerica (Gossip Girl),Drama,2007,7.5,"Josh Schwartz, Stephanie Savage",SAD,6,121,42,t,Leighton Meester,Blair Waldorf
-10,Broadchurch,Kriminalistička drama,2013,8.3,Chris Chibnall,UK,3,24,48,f,Olivia Colman,Ellie Miller
-10,Broadchurch,Kriminalistička drama,2013,8.3,Chris Chibnall,UK,3,24,48,f,David Tennant,Alec Hardy
-10,Broadchurch,Kriminalistička drama,2013,8.3,Chris Chibnall,UK,3,24,48,f,Jodie Whittaker,Beth Latimer
+id,naziv,zanr,godina,prosjecna_ocjena,redatelj,zemlja,broj_sezona,broj_epizoda,trajanje_ep,prema_knjizi,glumac,naziv_uloge
+1,"Prijatelji (Friends)","Komedija",1994,8.9,"David Crane, Marta Kauffman","SAD",10,236,22,false,"Jennifer Aniston","Rachel Green"
+1,"Prijatelji (Friends)","Komedija",1994,8.9,"David Crane, Marta Kauffman","SAD",10,236,22,false,"Matthew Perry","Chandler Bing"
+1,"Prijatelji (Friends)","Komedija",1994,8.9,"David Crane, Marta Kauffman","SAD",10,236,22,false,"Courteney Cox","Monica Geller"
+2,"Igra prijestolja (Game of Thrones)","Epska fantastika",2011,9.2,"David Benioff, D.B Weiss","SAD",8,73,60,true,"Kit Harington","Jon Snow"
+2,"Igra prijestolja (Game of Thrones)","Epska fantastika",2011,9.2,"David Benioff, D.B Weiss","SAD",8,73,60,true,"Peter Dinklage","Tyrion Lannister"
+2,"Igra prijestolja (Game of Thrones)","Epska fantastika",2011,9.2,"David Benioff, D.B Weiss","SAD",8,73,60,true,"Emilia Clarke","Daenerys Targaryen"
+3,"U uredu (The Office)","Komedija",2005,9.0,"Greg Daniels","SAD",9,201,22,false,"Steve Carell","Michael Scott"
+3,"U uredu (The Office)","Komedija",2005,9.0,"Greg Daniels","SAD",9,201,22,false,"John Krasinski","Jim Halpert"
+3,"U uredu (The Office)","Komedija",2005,9.0,"Greg Daniels","SAD",9,201,22,false,"Jenna Fischer","Pam Beesly"
+4,"Kruna (The Crown)","Drama",2016,8.6,"Peter Morgan","UK",6,60,55,false,"Claire Foy","Queen Elizabeth II"
+4,"Kruna (The Crown)","Drama",2016,8.6,"Peter Morgan","UK",6,60,55,false,"Matt Smith","Prince Philip"
+4,"Kruna (The Crown)","Drama",2016,8.6,"Peter Morgan","UK",6,60,55,false,"Dominic West","Prince Charles"
+5,"Crno-bijeli svijet (Black & White World)","Drama, Komedija",2015,8.7,"Goran Kulenović, Igor Mirković","Hrvatska",4,48,50,false,"Filip Riđički","Voljen Kipčić"
+5,"Crno-bijeli svijet (Black & White World)","Drama, Komedija",2015,8.7,"Goran Kulenović, Igor Mirković","Hrvatska",4,48,50,false,"Kaja Šišmanović","Una Miličević"
+5,"Crno-bijeli svijet (Black & White World)","Drama, Komedija",2015,8.7,"Goran Kulenović, Igor Mirković","Hrvatska",4,48,50,false,"Slavko Sobin","Đermano Kurtela"
+6,"Kuća od papira (La casa de papel)","Kriminalistička drama",2017,8.2,"Álex Pina","Španjolska",5,48,60,false,"Álvaro Morte","Profesor"
+6,"Kuća od papira (La casa de papel)","Kriminalistička drama",2017,8.2,"Álex Pina","Španjolska",5,48,60,false,"Úrsula Corberó","Tokio"
+6,"Kuća od papira (La casa de papel)","Kriminalistička drama",2017,8.2,"Álex Pina","Španjolska",5,48,60,false,"Pedro Alonso","Berlin"
+7,"Na putu prema dolje (Breaking Bad)","Kriminalistička drama",2008,9.5,"Vince Gilligan","SAD",5,62,45,false,"Bryan Cranston","Walter White"
+7,"Na putu prema dolje (Breaking Bad)","Kriminalistička drama",2008,9.5,"Vince Gilligan","SAD",5,62,45,false,"Aaron Paul","Jesse Pinkman"
+7,"Na putu prema dolje (Breaking Bad)","Kriminalistička drama",2008,9.5,"Vince Gilligan","SAD",5,62,45,false,"Anna Gunn","Skyler White"
+8,"Sherlock","Kriminalistička drama",2010,9.0,"Mark Gatiss","UK",4,13,90,true,"Benedict Cumberbartch","Sherlock Holmes"
+8,"Sherlock","Kriminalistička drama",2010,9.0,"Mark Gatiss","UK",4,13,90,true,"Martin Freeman","Dr. John Watson"
+8,"Sherlock","Kriminalistička drama",2010,9.0,"Mark Gatiss","UK",4,13,90,true,"Una Stubbs","Mrs. Hudson"
+9,"Tračerica (Gossip Girl)","Drama",2007,7.5,"Josh Schwartz, Stephanie Savage","SAD",6,121,42,true,"Penn Badgley","Dan Humphrey"
+9,"Tračerica (Gossip Girl)","Drama",2007,7.5,"Josh Schwartz, Stephanie Savage","SAD",6,121,42,true,"Blake Lively","Serena van der Woodsen"
+9,"Tračerica (Gossip Girl)","Drama",2007,7.5,"Josh Schwartz, Stephanie Savage","SAD",6,121,42,true,"Leighton Meester","Blair Waldorf"
+10,"Broadchurch","Kriminalistička drama",2013,8.3,"Chris Chibnall","UK",3,24,48,false,"Olivia Colman","Ellie Miller"
+10,"Broadchurch","Kriminalistička drama",2013,8.3,"Chris Chibnall","UK",3,24,48,false,"David Tennant","Alec Hardy"
+10,"Broadchurch","Kriminalistička drama",2013,8.3,"Chris Chibnall","UK",3,24,48,false,"Jodie Whittaker","Beth Latimer"
+16,"Stranger Things","Znanstvena fantastika",2016,8.6,"Matt Duffer, Ross Duffer","SAD",5,42,102,false,"Millie Bobby Brown","Eleven"
+16,"Stranger Things","Znanstvena fantastika",2016,8.6,"Matt Duffer, Ross Duffer","SAD",5,42,102,false,"Finn Wolfhard","Mike Wheeler"
+16,"Stranger Things","Znanstvena fantastika",2016,8.6,"Matt Duffer, Ross Duffer","SAD",5,42,102,false,"Winona Ryder","Joyce Byers"
+21,"novaNova","drama",2011,8.0,"redatelj","sad",8,40,42,false,"glumac1","uloga1"
+21,"novaNova","drama",2011,8.0,"redatelj","sad",8,40,42,false,"glumac2","uloga2"

@@ -1,272 +1,405 @@
 [
-    {
-        "id": 1,
-        "naziv": "Prijatelji (Friends)",
-        "zanr": "Komedija",
-        "godina": 1994,
-        "prosjecna_ocjena": 8.9,
-        "redatelj": "David Crane, Marta Kauffman",
-        "zemlja": "SAD",
-        "broj_sezona": 10,
-        "broj_epizoda": 236,
-        "trajanje_ep": 22,
-        "prema_knjizi": false,
-        "glavne_uloge": [
-            {
-                "glumac": "Jennifer Aniston",
-                "uloga": "Rachel Green"
-            },
-            {
-                "glumac": "Matthew Perry",
-                "uloga": "Chandler Bing"
-            },
-            {
-                "glumac": "Courteney Cox",
-                "uloga": "Monica Geller"
-            }
-        ]
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Prijatelji (Friends)",
+    "genre": "Komedija",
+    "startDate": 1994,
+    "director": {
+      "@type": "Person",
+      "name": "David Crane, Marta Kauffman"
     },
-    {
-        "id": 2,
-        "naziv": "Igra prijestolja (Game of Thrones)",
-        "zanr": "Epska fantastika",
-        "godina": 2011,
-        "prosjecna_ocjena": 9.2,
-        "redatelj": "David Benioff, D.B Weiss",
-        "zemlja": "SAD",
-        "broj_sezona": 8,
-        "broj_epizoda": 73,
-        "trajanje_ep": 60,
-        "prema_knjizi": true,
-        "glavne_uloge": [
-            {
-                "glumac": "Kit Harington",
-                "uloga": "Jon Snow"
-            },
-            {
-                "glumac": "Peter Dinklage",
-                "uloga": "Tyrion Lannister"
-            },
-            {
-                "glumac": "Emilia Clarke",
-                "uloga": "Daenerys Targaryen"
-            }
-        ]
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.9"
     },
-    {
-        "id": 3,
-        "naziv": "U uredu (The Office)",
-        "zanr": "Komedija",
-        "godina": 2005,
-        "prosjecna_ocjena": 9.0,
-        "redatelj": "Greg Daniels",
-        "zemlja": "SAD",
-        "broj_sezona": 9,
-        "broj_epizoda": 201,
-        "trajanje_ep": 22,
-        "prema_knjizi": false,
-        "glavne_uloge": [
-            {
-                "glumac": "Steve Carell",
-                "uloga": "Michael Scott"
-            },
-            {
-                "glumac": "John Krasinski",
-                "uloga": "Jim Halpert"
-            },
-            {
-                "glumac": "Jenna Fischer",
-                "uloga": "Pam Beesly"
-            }
-        ]
+    "numberOfSeasons": 10,
+    "numberOfEpisodes": 236,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Jennifer Aniston",
+        "roleName": "Rachel Green"
+      },
+      {
+        "@type": "Person",
+        "name": "Matthew Perry",
+        "roleName": "Chandler Bing"
+      },
+      {
+        "@type": "Person",
+        "name": "Courteney Cox",
+        "roleName": "Monica Geller"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Igra prijestolja (Game of Thrones)",
+    "genre": "Epska fantastika",
+    "startDate": 2011,
+    "director": {
+      "@type": "Person",
+      "name": "David Benioff, D.B Weiss"
     },
-    {
-        "id": 4,
-        "naziv": "Kruna (The Crown)",
-        "zanr": "Drama",
-        "godina": 2016,
-        "prosjecna_ocjena": 8.6,
-        "redatelj": "Peter Morgan",
-        "zemlja": "UK",
-        "broj_sezona": 6,
-        "broj_epizoda": 60,
-        "trajanje_ep": 55,
-        "prema_knjizi": false,
-        "glavne_uloge": [
-            {
-                "glumac": "Claire Foy",
-                "uloga": "Queen Elizabeth II"
-            },
-            {
-                "glumac": "Matt Smith",
-                "uloga": "Prince Philip"
-            },
-            {
-                "glumac": "Dominic West",
-                "uloga": "Prince Charles"
-            }
-        ]
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.2"
     },
-    {
-        "id": 5,
-        "naziv": "Crno-bijeli svijet (Black & White World)",
-        "zanr": "Drama, Komedija",
-        "godina": 2015,
-        "prosjecna_ocjena": 8.7,
-        "redatelj": "Goran Kulenović, Igor Mirković",
-        "zemlja": "Hrvatska",
-        "broj_sezona": 4,
-        "broj_epizoda": 48,
-        "trajanje_ep": 50,
-        "prema_knjizi": false,
-        "glavne_uloge": [
-            {
-                "glumac": "Filip Riđički",
-                "uloga": "Voljen Kipčić"
-            },
-            {
-                "glumac": "Kaja Šišmanović",
-                "uloga": "Una Miličević"
-            },
-            {
-                "glumac": "Slavko Sobin",
-                "uloga": "Đermano Kurtela"
-            }
-        ]
+    "numberOfSeasons": 8,
+    "numberOfEpisodes": 73,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Kit Harington",
+        "roleName": "Jon Snow"
+      },
+      {
+        "@type": "Person",
+        "name": "Peter Dinklage",
+        "roleName": "Tyrion Lannister"
+      },
+      {
+        "@type": "Person",
+        "name": "Emilia Clarke",
+        "roleName": "Daenerys Targaryen"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "U uredu (The Office)",
+    "genre": "Komedija",
+    "startDate": 2005,
+    "director": {
+      "@type": "Person",
+      "name": "Greg Daniels"
     },
-    {
-        "id": 6,
-        "naziv": "Kuća od papira (La casa de papel)",
-        "zanr": "Kriminalistička drama",
-        "godina": 2017,
-        "prosjecna_ocjena": 8.2,
-        "redatelj": "Álex Pina",
-        "zemlja": "Španjolska",
-        "broj_sezona": 5,
-        "broj_epizoda": 48,
-        "trajanje_ep": 60,
-        "prema_knjizi": false,
-        "glavne_uloge": [
-            {
-                "glumac": "Álvaro Morte",
-                "uloga": "Profesor"
-            },
-            {
-                "glumac": "Úrsula Corberó",
-                "uloga": "Tokio"
-            },
-            {
-                "glumac": "Pedro Alonso",
-                "uloga": "Berlin"
-            }
-        ]
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.0"
     },
-    {
-        "id": 7,
-        "naziv": "Na putu prema dolje (Breaking Bad)",
-        "zanr": "Kriminalistička drama",
-        "godina": 2008,
-        "prosjecna_ocjena": 9.5,
-        "redatelj": "Vince Gilligan",
-        "zemlja": "SAD",
-        "broj_sezona": 5,
-        "broj_epizoda": 62,
-        "trajanje_ep": 45,
-        "prema_knjizi": false,
-        "glavne_uloge": [
-            {
-                "glumac": "Bryan Cranston",
-                "uloga": "Walter White"
-            },
-            {
-                "glumac": "Aaron Paul",
-                "uloga": "Jesse Pinkman"
-            },
-            {
-                "glumac": "Anna Gunn",
-                "uloga": "Skyler White"
-            }
-        ]
+    "numberOfSeasons": 9,
+    "numberOfEpisodes": 201,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Steve Carell",
+        "roleName": "Michael Scott"
+      },
+      {
+        "@type": "Person",
+        "name": "John Krasinski",
+        "roleName": "Jim Halpert"
+      },
+      {
+        "@type": "Person",
+        "name": "Jenna Fischer",
+        "roleName": "Pam Beesly"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Kruna (The Crown)",
+    "genre": "Drama",
+    "startDate": 2016,
+    "director": {
+      "@type": "Person",
+      "name": "Peter Morgan"
     },
-    {
-        "id": 8,
-        "naziv": "Sherlock",
-        "zanr": "Kriminalistička drama",
-        "godina": 2010,
-        "prosjecna_ocjena": 9.0,
-        "redatelj": "Mark Gatiss",
-        "zemlja": "UK",
-        "broj_sezona": 4,
-        "broj_epizoda": 13,
-        "trajanje_ep": 90,
-        "prema_knjizi": true,
-        "glavne_uloge": [
-            {
-                "glumac": "Benedict Cumberbatch",
-                "uloga": "Sherlock Holmes"
-            },
-            {
-                "glumac": "Martin Freeman",
-                "uloga": "Dr. John Watson"
-            },
-            {
-                "glumac": "Una Stubbs",
-                "uloga": "Mrs. Hudson"
-            }
-        ]
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.6"
     },
-    {
-        "id": 9,
-        "naziv": "Tračerica (Gossip Girl)",
-        "zanr": "Drama",
-        "godina": 2007,
-        "prosjecna_ocjena": 7.5,
-        "redatelj": "Josh Schwartz, Stephanie Savage",
-        "zemlja": "SAD",
-        "broj_sezona": 6,
-        "broj_epizoda": 121,
-        "trajanje_ep": 42,
-        "prema_knjizi": true,
-        "glavne_uloge": [
-            {
-                "glumac": "Penn Badgley",
-                "uloga": "Dan Humphrey"
-            },
-            {
-                "glumac": "Blake Lively",
-                "uloga": "Serena van der Woodsen"
-            },
-            {
-                "glumac": "Leighton Meester",
-                "uloga": "Blair Waldorf"
-            }
-        ]
+    "numberOfSeasons": 6,
+    "numberOfEpisodes": 60,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Claire Foy",
+        "roleName": "Queen Elizabeth II"
+      },
+      {
+        "@type": "Person",
+        "name": "Matt Smith",
+        "roleName": "Prince Philip"
+      },
+      {
+        "@type": "Person",
+        "name": "Dominic West",
+        "roleName": "Prince Charles"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Crno-bijeli svijet (Black & White World)",
+    "genre": "Drama, Komedija",
+    "startDate": 2015,
+    "director": {
+      "@type": "Person",
+      "name": "Goran Kulenović, Igor Mirković"
     },
-    {
-        "id": 10,
-        "naziv": "Broadchurch",
-        "zanr": "Kriminalistička drama",
-        "godina": 2013,
-        "prosjecna_ocjena": 8.3,
-        "redatelj": "Chris Chibnall",
-        "zemlja": "UK",
-        "broj_sezona": 3,
-        "broj_epizoda": 24,
-        "trajanje_ep": 48,
-        "prema_knjizi": false,
-        "glavne_uloge": [
-            {
-                "glumac": "Olivia Colman",
-                "uloga": "Ellie Miller"
-            },
-            {
-                "glumac": "David Tennant",
-                "uloga": "Alec Hardy"
-            },
-            {
-                "glumac": "Jodie Whittaker",
-                "uloga": "Beth Latimer"
-            }
-        ]
-    }
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.7"
+    },
+    "numberOfSeasons": 4,
+    "numberOfEpisodes": 48,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Filip Riđički",
+        "roleName": "Voljen Kipčić"
+      },
+      {
+        "@type": "Person",
+        "name": "Kaja Šišmanović",
+        "roleName": "Una Miličević"
+      },
+      {
+        "@type": "Person",
+        "name": "Slavko Sobin",
+        "roleName": "Đermano Kurtela"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Kuća od papira (La casa de papel)",
+    "genre": "Kriminalistička drama",
+    "startDate": 2017,
+    "director": {
+      "@type": "Person",
+      "name": "Álex Pina"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.2"
+    },
+    "numberOfSeasons": 5,
+    "numberOfEpisodes": 48,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Álvaro Morte",
+        "roleName": "Profesor"
+      },
+      {
+        "@type": "Person",
+        "name": "Úrsula Corberó",
+        "roleName": "Tokio"
+      },
+      {
+        "@type": "Person",
+        "name": "Pedro Alonso",
+        "roleName": "Berlin"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Na putu prema dolje (Breaking Bad)",
+    "genre": "Kriminalistička drama",
+    "startDate": 2008,
+    "director": {
+      "@type": "Person",
+      "name": "Vince Gilligan"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.5"
+    },
+    "numberOfSeasons": 5,
+    "numberOfEpisodes": 62,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Bryan Cranston",
+        "roleName": "Walter White"
+      },
+      {
+        "@type": "Person",
+        "name": "Aaron Paul",
+        "roleName": "Jesse Pinkman"
+      },
+      {
+        "@type": "Person",
+        "name": "Anna Gunn",
+        "roleName": "Skyler White"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Sherlock",
+    "genre": "Kriminalistička drama",
+    "startDate": 2010,
+    "director": {
+      "@type": "Person",
+      "name": "Mark Gatiss"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.0"
+    },
+    "numberOfSeasons": 4,
+    "numberOfEpisodes": 13,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Benedict Cumberbartch",
+        "roleName": "Sherlock Holmes"
+      },
+      {
+        "@type": "Person",
+        "name": "Martin Freeman",
+        "roleName": "Dr. John Watson"
+      },
+      {
+        "@type": "Person",
+        "name": "Una Stubbs",
+        "roleName": "Mrs. Hudson"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Tračerica (Gossip Girl)",
+    "genre": "Drama",
+    "startDate": 2007,
+    "director": {
+      "@type": "Person",
+      "name": "Josh Schwartz, Stephanie Savage"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "7.5"
+    },
+    "numberOfSeasons": 6,
+    "numberOfEpisodes": 121,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Penn Badgley",
+        "roleName": "Dan Humphrey"
+      },
+      {
+        "@type": "Person",
+        "name": "Blake Lively",
+        "roleName": "Serena van der Woodsen"
+      },
+      {
+        "@type": "Person",
+        "name": "Leighton Meester",
+        "roleName": "Blair Waldorf"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Broadchurch",
+    "genre": "Kriminalistička drama",
+    "startDate": 2013,
+    "director": {
+      "@type": "Person",
+      "name": "Chris Chibnall"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.3"
+    },
+    "numberOfSeasons": 3,
+    "numberOfEpisodes": 24,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Olivia Colman",
+        "roleName": "Ellie Miller"
+      },
+      {
+        "@type": "Person",
+        "name": "David Tennant",
+        "roleName": "Alec Hardy"
+      },
+      {
+        "@type": "Person",
+        "name": "Jodie Whittaker",
+        "roleName": "Beth Latimer"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "Stranger Things",
+    "genre": "Znanstvena fantastika",
+    "startDate": 2016,
+    "director": {
+      "@type": "Person",
+      "name": "Matt Duffer, Ross Duffer"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.6"
+    },
+    "numberOfSeasons": 5,
+    "numberOfEpisodes": 42,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "Millie Bobby Brown",
+        "roleName": "Eleven"
+      },
+      {
+        "@type": "Person",
+        "name": "Finn Wolfhard",
+        "roleName": "Mike Wheeler"
+      },
+      {
+        "@type": "Person",
+        "name": "Winona Ryder",
+        "roleName": "Joyce Byers"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TVSeries",
+    "name": "novaNova",
+    "genre": "drama",
+    "startDate": 2011,
+    "director": {
+      "@type": "Person",
+      "name": "redatelj"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "8.0"
+    },
+    "numberOfSeasons": 8,
+    "numberOfEpisodes": 40,
+    "actors": [
+      {
+        "@type": "Person",
+        "name": "glumac1",
+        "roleName": "uloga1"
+      },
+      {
+        "@type": "Person",
+        "name": "glumac2",
+        "roleName": "uloga2"
+      }
+    ]
+  }
 ]

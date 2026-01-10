@@ -47,14 +47,33 @@ p, li {
   display: inline-block;
   background-color: #2980b9;
   color: #fff;
-  padding: 12px 24px;
-  border-radius: 5px;
+  padding: 8px 16px;      
+  border-radius: 7px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;        
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
   background-color: #3498db;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+#auth-links a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #2c3e50;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#auth-links a:hover {
+  background-color: #34495e;
+  transform: translateY(-1px);
+  text-decoration: none;
 }

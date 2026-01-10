@@ -7,9 +7,18 @@
   <meta name="keywords" content="TV serije, uloge, redatelj, žanr, glumci">
   <meta name="author" content="Natali Lazarić">
   <link rel="stylesheet" href="style.css"> 
+
 </head>
 <body>
   <h1>Otvoreni podaci o TV serijama</h1>
+
+  <div id="auth-links">
+    <a href="/login" id="login-btn">Prijava</a>
+    <a href="/profile-page" id="profile-btn" style="display:none;">Korisnički profil</a>
+    <a href="/refresh-data" id="refresh-btn" style="display:none;">Osvježi preslike</a>
+    <a href="/logout" id="logout-btn" style="display:none;">Odjava</a>
+  </div>
+
   <h2>
     <a href="datatable.html" class="btn">Prikaži tablicu i filtriraj podatke</a>
   </h2>
@@ -18,8 +27,8 @@
     <div class="main-text">
       <p>Preuzimanje podataka u csv i json formatu:</p>
       <ul>
-        <li><a href="../backend/data/tv_serije.csv" download>CSV verzija</a></li>
-        <li><a href="../backend/data/tv_serije.json" download>JSON verzija</a></li>
+        <li><a href="/data/tv_serije.csv" download>CSV verzija</a></li>
+        <li><a href="/data/tv_serije.json" download>JSON verzija</a></li>
       </ul>
     </div>
 
@@ -61,5 +70,31 @@
       </ul>
     </div>
   </div>
+
+  <script>
+    async function checkAuth() {
+      try {
+        const res = await fetch('/profile');
+        if (res.ok) {
+          // Korisnik je prijavljen
+          document.getElementById('login-btn').style.display = 'none';
+          document.getElementById('profile-btn').style.display = 'inline';
+          document.getElementById('refresh-btn').style.display = 'inline';
+          document.getElementById('logout-btn').style.display = 'inline';
+        } else {
+          // Korisnik nije prijavljen
+          document.getElementById('login-btn').style.display = 'inline';
+          document.getElementById('profile-btn').style.display = 'none';
+          document.getElementById('refresh-btn').style.display = 'none';
+          document.getElementById('logout-btn').style.display = 'none';
+        }
+      } catch (err) {
+        console.log('Greška provjere autentikacije:', err);
+      }
+    }
+
+    checkAuth();
+  </script>
+
 </body>
 </html>

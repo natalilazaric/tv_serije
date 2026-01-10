@@ -68,9 +68,39 @@ router.get('/api/serije', async (req, res) => {
     }
 
     if (format === 'json') {
-        res.header('Content-Type', 'application/json');
-        return res.json(result.rows);
+      const jsonLD = result.rows.map(serija => ({
+        "@context": "https://schema.org",
+        "@type": "TVSeries",
+        "@id": `http://localhost:3000/api/serije/${serija.id}`,
+
+        "name": serija.naziv,
+        "genre": serija.zanr,
+        "startDate": serija.godina,
+
+        "director": {
+          "@type": "Person",
+          "name": serija.redatelj
+        },
+
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": serija.prosjecna_ocjena
+        },
+
+        "numberOfSeasons": serija.broj_sezona,
+        "numberOfEpisodes": serija.broj_epizoda,
+
+        "actor": serija.uloge.map(u => ({
+          "@type": "Person",
+          "name": u.glumac,
+          "roleName": u.uloga
+        }))
+      }));
+
+      res.header('Content-Type', 'application/ld+json');
+      return res.json(jsonLD);
     }
+
 
     res.json({ response: result.rows });
 
